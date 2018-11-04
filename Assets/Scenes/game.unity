@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -408,6 +409,21 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1b1333e74b58d47af280b2c91a1b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPage: {fileID: 1989758966}
+  GameOverPage: {fileID: 505323139}
+  CountdownPage: {fileID: 406377650}
+  ScoreText: {fileID: 1846880189}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -677,7 +693,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 698332422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420030}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &698332422
@@ -723,7 +750,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4880712224259512, guid: e5091f1d84287d14289b29731fa0ca71, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.07
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 4880712224259512, guid: e5091f1d84287d14289b29731fa0ca71, type: 2}
       propertyPath: m_LocalPosition.y
@@ -947,6 +974,7 @@ GameObject:
   - component: {fileID: 1223176201}
   - component: {fileID: 1223176203}
   - component: {fileID: 1223176204}
+  - component: {fileID: 1223176205}
   m_Layer: 0
   m_Name: bird
   m_TagString: Untagged
@@ -1007,7 +1035,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1223176200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5291305, y: -0.38233876, z: -48.596188}
+  m_LocalPosition: {x: -1.22, y: 0.81, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 412536178}
@@ -1048,6 +1076,20 @@ CircleCollider2D:
   m_Offset: {x: -0.00000047683716, y: 0}
   serializedVersion: 2
   m_Radius: 2.47
+--- !u!114 &1223176205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223176200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f5700bd2629ba418e07538919965bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tapForce: 250
+  tiltSmooth: 2
+  startPos: {x: -1.22, y: 0.81, z: 0}
 --- !u!4 &1285062582 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4977430470750392, guid: d00abb77406b8444f9fe22c746b206da,
