@@ -37,11 +37,15 @@ public class GameManager : MonoBehaviour {
     void OnEnable()
     {
         CountdownText.OnCountdownFinished += OnCountdownFinished;
+        TapController.OnPlayerDied += OnPlayerDied;
+        TapController.OnPlayerScored += OnPlayerScored;
     }
 
     void OnDisable()
     {
         CountdownText.OnCountdownFinished -= OnCountdownFinished;
+        TapController.OnPlayerDied -= OnPlayerDied;
+        TapController.OnPlayerScored -= OnPlayerScored;
     }
 
     void OnCountdownFinished()
@@ -50,6 +54,23 @@ public class GameManager : MonoBehaviour {
         OnGameStarted();
         score = 0;
         gameOver = false;
+    }
+
+    void OnPlayerDied()
+    {
+        gameOver = true;
+        int savedScore = PlayerPrefs.GetInt("HighScore");
+        if (score > savedScore)
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
+        SetPageState(PageState.GameOver);
+    }
+
+    void OnPlayerScored()
+    {
+        score++;
+        ScoreText.text = score.ToString();
     }
 
     void SetPageState(PageState state)
@@ -83,7 +104,7 @@ public class GameManager : MonoBehaviour {
     public void ConfirmGameOver()
     {
         //activated when the replay button is hit
-        OnGameOverConfirmed(); //event
+        OnGameOverConfirmed(); //event sent to TapController
         ScoreText.text = "0";
         SetPageState(PageState.Start);
     }
