@@ -29,9 +29,27 @@ public class GameManager : MonoBehaviour {
 
     public bool GameOver { get { return gameOver; } }
 
-    private void Awake()
+    void Awake()
     {
         Instance = this;
+    }
+
+    void OnEnable()
+    {
+        CountdownText.OnCountdownFinished += OnCountdownFinished;
+    }
+
+    void OnDisable()
+    {
+        CountdownText.OnCountdownFinished -= OnCountdownFinished;
+    }
+
+    void OnCountdownFinished()
+    {
+        SetPageState(PageState.None);
+        OnGameStarted();
+        score = 0;
+        gameOver = false;
     }
 
     void SetPageState(PageState state)
