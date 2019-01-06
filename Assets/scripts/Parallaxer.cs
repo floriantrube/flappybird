@@ -57,7 +57,7 @@ public class Parallaxer : MonoBehaviour {
 
     void OnGameOverConfirmed()
     {
-
+        Configure();
     }
 
     void Update()
@@ -66,6 +66,31 @@ public class Parallaxer : MonoBehaviour {
     }
 
     void Configure()
+    {
+
+    }
+
+    void Spawn()
+    {
+
+    }
+
+    void SpawnImmediate()
+    {
+
+    }
+
+    void Shift()
+    {
+
+    }
+
+    void CheckDisposeObject(PoolObject poolObject)
+    {
+
+    }
+
+    Transform GetPoolObject()
     {
 
     }
