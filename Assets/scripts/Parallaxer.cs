@@ -11,4 +11,17 @@ public class Parallaxer : MonoBehaviour {
         public void Use() { inUse = true;  }
         public void Dispose() { inUse = false;  }
 }
+
+    [System.Serializable]
+
+
+    public GameObject Prefab;
+    public int poolSize;
+    public float shiftSpeed;
+    public float spawnRate;
+
+    public Vector3 defaultSpawnPos;
+    public bool spawnImmediate;
+    public Vector3 immediateSpawnPos;
+    public Vector2 targetAspect;
 }
