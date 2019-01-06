@@ -13,13 +13,18 @@ public class Parallaxer : MonoBehaviour {
 }
 
     [System.Serializable]
-
+    public struct YSpawnRange
+    {
+        public float min;
+        public float max;
+    }
 
     public GameObject Prefab;
     public int poolSize;
     public float shiftSpeed;
     public float spawnRate;
 
+    public YSpawnRange YSpawnRange;
     public Vector3 defaultSpawnPos;
     public bool spawnImmediate;
     public Vector3 immediateSpawnPos;
