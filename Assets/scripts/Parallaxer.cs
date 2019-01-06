@@ -5,6 +5,10 @@ using UnityEngine;
 public class Parallaxer : MonoBehaviour {
 
     class PoolObject {
-    
+        public Transform transform;
+        public bool inUse;
+        public PoolObject(Transform t) { transform = t; }
+        public void Use() { inUse = true;  }
+        public void Dispose() { inUse = false;  }
 }
 }
