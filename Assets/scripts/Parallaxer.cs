@@ -29,4 +29,8 @@ public class Parallaxer : MonoBehaviour {
     public bool spawnImmediate;
     public Vector3 immediateSpawnPos;
     public Vector2 targetAspect;
+
+    float spawnTimer;
+
+    PoolObject[] poolObjects;
 }
