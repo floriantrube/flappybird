@@ -28,9 +28,45 @@ public class Parallaxer : MonoBehaviour {
     public Vector3 defaultSpawnPos;
     public bool spawnImmediate;
     public Vector3 immediateSpawnPos;
-    public Vector2 targetAspect;
+    public Vector2 targetAspectRatio;
 
     float spawnTimer;
-
+    float targetAspect;
     PoolObject[] poolObjects;
+    GameManager game;
+
+    void Awake()
+    {
+        Configure();
+    }
+
+    void Start()
+    {
+        game = GameManager.Instance;
+    }
+
+    void OnEnable()
+    {
+        GameManager.OnGameOverConfirmed += OnGameOverConfirmed;
+    }
+
+    void OnDisable()
+    {
+        GameManager.OnGameOverConfirmed -= OnGameOverConfirmed;
+    }
+
+    void OnGameOverConfirmed()
+    {
+
+    }
+
+    void Update()
+    {
+        
+    }
+
+    void Configure()
+    {
+
+    }
 }
