@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 91194429}
+  - component: {fileID: 91194430}
   m_Layer: 5
   m_Name: Clouds
   m_TagString: Untagged
@@ -146,6 +147,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &91194430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91194428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46527a5524babf240809e9cc20e3ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &406377650
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 750002271}
+  - component: {fileID: 750002272}
   m_Layer: 5
   m_Name: Pipes
   m_TagString: Untagged
@@ -818,6 +831,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &750002272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750002270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46527a5524babf240809e9cc20e3ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &889871128
 Prefab:
   m_ObjectHideFlags: 0
@@ -1652,6 +1676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142945494}
+  - component: {fileID: 2142945495}
   m_Layer: 5
   m_Name: Stars
   m_TagString: Untagged
@@ -1677,3 +1702,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2142945495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142945493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46527a5524babf240809e9cc20e3ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
