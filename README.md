@@ -9,4 +9,4 @@
 
 ## Screenshots
 
-![Image NumberWizard](./Bildschirmfots/1.png)
+![Image NumberWizard](C:/Benutzer/Flogo2000/Bilder/Bildschirmfots/1.png)
