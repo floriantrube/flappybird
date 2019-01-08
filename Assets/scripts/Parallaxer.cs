@@ -92,6 +92,14 @@ public class Parallaxer : MonoBehaviour {
 
     Transform GetPoolObject()
     {
-
+        for (int i = 0; i < poolObjects.Length; i++)
+        {
+            if (!poolObjects[i].inUse)
+            {
+                poolObjects[i].Use();
+                return poolObjects[i];
+            }
+        }
+        return null;
     }
 }
