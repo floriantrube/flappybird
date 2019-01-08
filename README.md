@@ -9,3 +9,4 @@
 
 ## Screenshots
 
+![Image NumberWizard](./Bildschirmfots/1.png)
